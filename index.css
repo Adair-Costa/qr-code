@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Poppins:wght@200;300&family=Roboto:wght@300;400;500&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(90deg, rgb(0, 69, 125) 0%, 
+                rgba(204, 244, 209, 1) 49%,
+                rgba(131, 242, 160, 1) 58%,
+                rgb(0, 100, 125) 100%);
+}
+
+body {            /*centraliza tudo que esta no body*/
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.wrapper {
+    background-color: #eee;
+    height: 250px;
+    width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0.8rem 2.5rem rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 50px;
+}
+
+.wrapper.active {       /*ativa e desativa o wrapper */
+    height: 300px;
+}
+
+.wrapper.active .header h1 {
+    font-size: 2.5rem;
+}
+
+.header-form {
+    padding-left: 50px;
+    margin-right: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .header h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.wrapper .header p {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.wrapper .form {           /*centraliza o form*/
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper .form input {            /*tira borda do input*/
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+    height: 40px;
+    margin-bottom: 2rem;
+    border: none;
+    border-bottom: 0.1rem solid #008000;
+}
+ 
+.wrapper .form input::placeholder {             /*estila o placeholder*/
+    padding-left: 0.5rem;
+    color: #000;
+}
+
+.wrapper .form button {
+    width: 100%;
+    height: 40px;
+    background-color: rgba(74, 151, 97);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #eee;
+    cursor: pointer;
+}
+
+.wrapper .form button:hover {
+    border: 0.1rem solid rgb(74, 151, 97);
+    color: rgb(74, 151, 97);
+    background-color: transparent;
+    font-weight: bolder;
+}
+
+.wrapper .qr-code {
+    display: none;
+    padding: 10px;
+    margin: 20px 10px 0 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.wrapper .qr-code img {
+    width: 170px;
+}
+
+.wrapper.active .qr-code {
+    display: block;
+    opacity: 1;
+    transition: all 0.5s 0.5s ease;
+}
